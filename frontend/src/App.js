@@ -1,19 +1,18 @@
-// src/App.js
 import React, { useState } from "react";
 import { ethers } from "ethers";
 import "./App.css";
 
 function App() {
-  const [pair, setPair] = useState(
+  const [selectedPair, setSelectedPair] = useState(
     "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43"
   );
-  const [conversion, setConversion] = useState("");
+  const [conversionResult, setConversionResult] = useState("");
   const [contractAddress] = useState(
-    "0x847541F2927d6b5fDF2f04f4eC5bD823df62F95A"
+    "0xE125a64f15a0E48c4Fa952aA79e6224738dB1A61"
   );
   const [provider] = useState(
     new ethers.JsonRpcProvider(
-      "https://sepolia.infura.io/v3/83b607a9da6648eda62e165bb0d12e4f"
+      "https://sepolia.infura.io/v3/ba6ba1e27d974fe4869b9ed530f3ce18"
     )
   );
 
@@ -26,21 +25,25 @@ function App() {
         ],
         provider
       );
-      const result = await contract.getChainlinkDataFeedLatestAnswer(pair);
-      setConversion(Number(result.toString()) / 10 ** 8);
+      const result = await contract.getChainlinkDataFeedLatestAnswer(
+        selectedPair
+      );
+      setConversionResult(Number(result.toString()) / 10 ** 8);
     } catch (error) {
-      // console.log(pair);
       console.error("Error converting:", error.message);
     }
   };
 
   return (
-    <div className="main-div">
-      <h1>Currency Converter DApp</h1>
+    <div className="main-container">
+      <h1>Crypto Converter App</h1>
       <div>
         <label>
           Select Currency Pair:
-          <select value={pair} onChange={(e) => setPair(e.target.value)}>
+          <select
+            value={selectedPair}
+            onChange={(e) => setSelectedPair(e.target.value)}
+          >
             <option value="0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43">
               BTC to USD
             </option>
@@ -55,21 +58,10 @@ function App() {
             </option>
           </select>
         </label>
-        <button onClick={handleConvert}>Submit</button>
-        <div className="conversion">
-          <p>Conversion Result: {conversion}</p>
+        <button onClick={handleConvert}>Convert</button>
+        <div className="result">
+          <p>Conversion Result: {conversionResult}</p>
         </div>
-      </div>
-      <div className="footer">
-        <p>
-          Made with ❤️ by{" "}
-          <a
-            href="https://www.linkedin.com/in/athika-fatima-1a59121aa/"
-            className="key-styling"
-          >
-            Athika Fatima
-          </a>
-        </p>
       </div>
     </div>
   );

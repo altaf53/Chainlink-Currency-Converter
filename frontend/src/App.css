@@ -1,45 +1,53 @@
+body {
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .main-div {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 h1 {
-  background: linear-gradient(
-    57.94deg,
-    #52ff00,
-    rgba(163, 255, 51, 0.95) 36.57%,
-    #fff846 65.74%,
-    #fdf300
-  );
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 900;
+  background: #3498db; 
+  color: #fff; 
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
 label {
-  font-size: 20px;
+  font-size: 18px;
+  margin-right: 10px;
+  color: #555; 
 }
-button {
-  background: linear-gradient(
-    57.94deg,
-    #52ff00,
-    rgba(163, 255, 51, 0.95) 36.57%,
-    #fff846 65.74%,
-    #fdf300
-  );
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 900;
-  border: none;
+
+select {
   padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background: #2ecc71; 
+  font-size: 16px;
+  padding: 12px 20px; 
   margin: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .conversion {
-  margin-top: -15px;
+  margin-top: 20px;
   font-size: 20px;
+  color: #333; 
 }
 
 .key-styling {
-  color: #52ff00;
+  color: #e74c3c; 
   font-weight: 600;
+}
+
+.result {
+  color: black;
 }

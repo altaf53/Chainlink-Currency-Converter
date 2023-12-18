@@ -1,4 +1,4 @@
-# Currency Converter DApp by <a href="https://www.linkedin.com/in/athika-fatima/"> Athika Fatima</a> - 101502209
+# Currency Converter DApp by <a href="https://www.linkedin.com/in/altaf-dev/"> Altaf Ali</a>
 
 **NFT Minting DApp using HardHat, Pinata and Alchemy**
 
@@ -27,5 +27,3 @@
       npm run start
 
 >
-
-Note: Feel free to give a follow if this helped, and reach out if you need help :)

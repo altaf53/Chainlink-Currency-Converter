@@ -1,0 +1,45 @@
+.main-div {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  background: linear-gradient(
+    57.94deg,
+    #52ff00,
+    rgba(163, 255, 51, 0.95) 36.57%,
+    #fff846 65.74%,
+    #fdf300
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+label {
+  font-size: 20px;
+}
+button {
+  background: linear-gradient(
+    57.94deg,
+    #52ff00,
+    rgba(163, 255, 51, 0.95) 36.57%,
+    #fff846 65.74%,
+    #fdf300
+  );
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  border: none;
+  padding: 10px;
+  margin: 20px;
+}
+
+.conversion {
+  margin-top: -15px;
+  font-size: 20px;
+}
+
+.key-styling {
+  color: #52ff00;
+  font-weight: 600;
+}
